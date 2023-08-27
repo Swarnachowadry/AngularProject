@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NgModel } from '@angular/forms';
 import { NgFor } from '@angular/common';
 @Component({
@@ -8,6 +8,13 @@ import { NgFor } from '@angular/common';
 })
 export class DashboardComponentComponent {
 
-  names : string[] = ['Swarna' , 'shalu' , 'hari']
+  @Input() userID: string ;
 
+ 
+  collection: string[];
+
+  constructor() {
+    this.collection = ['Swarna', 'Veena', 'Yash'];
+    this.userID= '';
+  }
 }
